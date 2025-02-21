@@ -493,6 +493,7 @@ export interface ApiEmpleadoEmpleado extends Struct.CollectionTypeSchema {
 export interface ApiEstadoEstado extends Struct.CollectionTypeSchema {
   collectionName: 'estados';
   info: {
+    description: '';
     displayName: 'Estado';
     pluralName: 'estados';
     singularName: 'estado';
@@ -504,12 +505,10 @@ export interface ApiEstadoEstado extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    descripcion: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 20;
-        minLength: 1;
-      }>;
+    Estado: Schema.Attribute.Enumeration<
+      ['Reparacion', 'Alquilado', 'Reservado', 'Disponible', 'No Disponible']
+    > &
+      Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -691,6 +690,7 @@ export interface ApiVehiculoVehiculo extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     placa: Schema.Attribute.String &
       Schema.Attribute.Required &
+      Schema.Attribute.Unique &
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 10;
       }>;

@@ -28,6 +28,7 @@
     "usuario": {
       "type": "string",
       "required": true,
+      "unique": true,
       "maxLength": 20
     },
     "clave": {

@@ -4,17 +4,23 @@
   "info": {
     "singularName": "estado",
     "pluralName": "estados",
-    "displayName": "Estado"
+    "displayName": "Estado",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
-    "descripcion": {
-      "type": "string",
-      "required": true,
-      "maxLength": 20,
-      "minLength": 1
+    "Estado": {
+      "type": "enumeration",
+      "enum": [
+        "Reparacion",
+        "Alquilado",
+        "Reservado",
+        "Disponible",
+        "No Disponible"
+      ],
+      "required": true
     }
   }
 }
