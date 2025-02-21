@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pagos",
+  "info": {
+    "singularName": "pago",
+    "pluralName": "pagos",
+    "displayName": "Pago"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "fecha": {
+      "type": "date",
+      "required": true
+    },
+    "importe": {
+      "type": "decimal",
+      "required": true
+    }
+  }
+}

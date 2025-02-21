@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tipos",
+  "info": {
+    "singularName": "tipo",
+    "pluralName": "tipos",
+    "displayName": "Tipo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "descripcion_ampliada": {
+      "type": "text",
+      "required": true,
+      "maxLength": 1000,
+      "minLength": 2
+    },
+    "costo_alquiler": {
+      "type": "decimal",
+      "required": true,
+      "min": 0.01
+    },
+    "tipo_vehiculo": {
+      "type": "enumeration",
+      "enum": [
+        "Sedan",
+        "Camioneta",
+        "SUV",
+        "MiniVan",
+        "Convertible",
+        "Deportivo",
+        "Motocicleta"
+      ],
+      "required": true
+    }
+  }
+}

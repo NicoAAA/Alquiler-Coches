@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "marcas",
+  "info": {
+    "singularName": "marca",
+    "pluralName": "marcas",
+    "displayName": "Marca"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Nombre": {
+      "type": "string",
+      "required": true,
+      "maxLength": 70,
+      "minLength": 1
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "empleados",
+  "info": {
+    "singularName": "empleado",
+    "pluralName": "empleados",
+    "displayName": "Empleado"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true,
+      "maxLength": 100
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "maxLength": 100
+    },
+    "telefono": {
+      "type": "string",
+      "required": true,
+      "maxLength": 20
+    },
+    "usuario": {
+      "type": "string",
+      "required": true,
+      "maxLength": 20
+    },
+    "clave": {
+      "type": "password",
+      "required": true
+    }
+  }
+}

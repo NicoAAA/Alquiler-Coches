@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "estados",
+  "info": {
+    "singularName": "estado",
+    "pluralName": "estados",
+    "displayName": "Estado"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "descripcion": {
+      "type": "string",
+      "required": true,
+      "maxLength": 20,
+      "minLength": 1
+    }
+  }
+}

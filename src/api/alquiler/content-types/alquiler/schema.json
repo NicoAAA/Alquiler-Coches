@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "alquileres",
+  "info": {
+    "singularName": "alquiler",
+    "pluralName": "alquileres",
+    "displayName": "Alquiler"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "fecha_inicio": {
+      "type": "date",
+      "required": true
+    },
+    "fecha_fin": {
+      "type": "date",
+      "required": true
+    },
+    "fecha_entrega": {
+      "type": "date",
+      "required": true
+    },
+    "costo": {
+      "type": "decimal",
+      "required": true
+    }
+  }
+}
