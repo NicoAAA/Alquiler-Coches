@@ -484,6 +484,7 @@ export interface ApiEmpleadoEmpleado extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     usuario: Schema.Attribute.String &
       Schema.Attribute.Required &
+      Schema.Attribute.Unique &
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 20;
       }>;
@@ -578,7 +579,7 @@ export interface ApiMetodoMetodo extends Struct.CollectionTypeSchema {
         'Tarjeta de Debito',
         'Tarjeta de Credito',
         'Nequi',
-        'Daplita',
+        'Daviplata',
         'PayPal',
       ]
     > &
