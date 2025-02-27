@@ -17,6 +17,21 @@
     "importe": {
       "type": "decimal",
       "required": true
+    },
+    "id_alquiler": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::alquiler.alquiler"
+    },
+    "id_empleado": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::empleado.empleado"
+    },
+    "id_metodo": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::metodo.metodo"
     }
   }
 }

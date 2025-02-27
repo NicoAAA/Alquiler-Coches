@@ -387,6 +387,15 @@ export interface ApiAlquilerAlquiler extends Struct.CollectionTypeSchema {
     fecha_entrega: Schema.Attribute.Date & Schema.Attribute.Required;
     fecha_fin: Schema.Attribute.Date & Schema.Attribute.Required;
     fecha_inicio: Schema.Attribute.Date & Schema.Attribute.Required;
+    id_cliente: Schema.Attribute.Relation<'oneToOne', 'api::cliente.cliente'>;
+    id_empleado: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::empleado.empleado'
+    >;
+    id_vehiculo: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::vehiculo.vehiculo'
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -607,6 +616,15 @@ export interface ApiPagoPago extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     fecha: Schema.Attribute.Date & Schema.Attribute.Required;
+    id_alquiler: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::alquiler.alquiler'
+    >;
+    id_empleado: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::empleado.empleado'
+    >;
+    id_metodo: Schema.Attribute.Relation<'oneToOne', 'api::metodo.metodo'>;
     importe: Schema.Attribute.Decimal & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::pago.pago'> &
@@ -672,6 +690,7 @@ export interface ApiTipoTipo extends Struct.CollectionTypeSchema {
 export interface ApiVehiculoVehiculo extends Struct.CollectionTypeSchema {
   collectionName: 'vehiculos';
   info: {
+    description: '';
     displayName: 'Vehiculo';
     pluralName: 'vehiculos';
     singularName: 'vehiculo';
@@ -683,6 +702,9 @@ export interface ApiVehiculoVehiculo extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    id_estado: Schema.Attribute.Relation<'oneToOne', 'api::estado.estado'>;
+    id_marca: Schema.Attribute.Relation<'oneToOne', 'api::marca.marca'>;
+    id_tipo: Schema.Attribute.Relation<'oneToOne', 'api::tipo.tipo'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

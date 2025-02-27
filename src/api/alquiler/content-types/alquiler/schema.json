@@ -25,6 +25,21 @@
     "costo": {
       "type": "decimal",
       "required": true
+    },
+    "id_vehiculo": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::vehiculo.vehiculo"
+    },
+    "id_cliente": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cliente.cliente"
+    },
+    "id_empleado": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::empleado.empleado"
     }
   }
 }

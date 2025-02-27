@@ -4,7 +4,8 @@
   "info": {
     "singularName": "vehiculo",
     "pluralName": "vehiculos",
-    "displayName": "Vehiculo"
+    "displayName": "Vehiculo",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,6 +16,21 @@
       "required": true,
       "unique": true,
       "maxLength": 10
+    },
+    "id_marca": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::marca.marca"
+    },
+    "id_tipo":{
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tipo.tipo"
+    },
+    "id_estado":{
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::estado.estado"
     }
   }
 }
